@@ -1,11 +1,13 @@
 package app;
 
+import jogoTabuleiro.Posicao;
+
 public class Programa {
 
 	public static void main(String[] args) {
 
-		System.out.println("Ola Mundo");
-		
+		Posicao posicao = new Posicao(5, 4);
+		System.out.println(posicao);
 		
 	}
 
