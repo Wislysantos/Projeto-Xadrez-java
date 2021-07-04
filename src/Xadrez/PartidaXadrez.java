@@ -1,6 +1,9 @@
 package Xadrez;
 
+import jogoTabuleiro.Posicao;
 import jogoTabuleiro.Tabuleiro;
+import pecas.Xadrez.Rei;
+import pecas.Xadrez.Torre;
 
 public class PartidaXadrez {
 	
@@ -8,7 +11,7 @@ public class PartidaXadrez {
 	
 	public PartidaXadrez() {
 		tabuleiro = new Tabuleiro(8, 8);//quem tem saber a dimensão de um tabuleiro é partida de xadrez, nesta classe que eu vou dizer que ele é 8 por 8 
-
+		inicioJogo();
 	}
 	
 	public PecaXadrez[][] getPecas(){//este método vai ter que retorna uma matriz de peças de xadrez correspondente a PartidaXadrez
@@ -19,6 +22,11 @@ public class PartidaXadrez {
 			}
 		}
 		return mat;
+	}
+	
+	private void inicioJogo() {//metodo é para posições da pecas  
+		tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(2, 1));
+		tabuleiro.colocarPeca(new Rei(tabuleiro, Cor.PRETO),new Posicao(3, 6));
 	}
 
 }

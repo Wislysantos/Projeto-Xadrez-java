@@ -36,4 +36,9 @@ public class Tabuleiro {
 		return pecas[posicao.getLinha()][posicao.getColuna()];
 	}
 	
+	public void colocarPeca(Peca peca, Posicao posicao) {
+		pecas[posicao.getLinha()][posicao.getColuna()] = peca;// pegando esta matriz na posição dada e estou atribuindo a ela peça que eu informei
+		peca.posicao = posicao;//aqui eu to falando que a peça não esta mais na posição null, ela esta na posição que eu infomei no metodo 
+	}
+	
 }

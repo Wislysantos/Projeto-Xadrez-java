@@ -18,11 +18,11 @@ public class UI {
 	
 	private static void imprimirPeca(PecaXadrez peca) {//criei este método para imprimir uma única peça
 		if(peca == null) {//este peca for igual null então não tinha nesta posição do tabuleiro 
-			System.out.println("-");
+			System.out.print("-");
 		}else {
-			System.out.println(peca);
+			System.out.print(peca);
 		}
-		System.out.println(" ");
+		System.out.print(" ");
 	}
 
 }
